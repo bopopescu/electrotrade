@@ -10,7 +10,7 @@ def brand_data_json(i):
     if i.logo:
         j['logo'] = i.logo.url
     else:
-        j['image_slave_one'] = ''
+        j['image_subordinate_one'] = ''
     return j
 
 
@@ -30,22 +30,22 @@ def product_data_json(i):
         j['image'] = ''
     if i.in_offer is None:
         j['in_offer'] = ""
-    if i.image_slave_one:
-        j['image_slave_one'] = i.image_slave_one.url
+    if i.image_subordinate_one:
+        j['image_subordinate_one'] = i.image_subordinate_one.url
     else:
-        j['image_slave_one'] = ''
-    if i.image_slave_two:
-        j['image_slave_two'] = i.image_slave_two.url
+        j['image_subordinate_one'] = ''
+    if i.image_subordinate_two:
+        j['image_subordinate_two'] = i.image_subordinate_two.url
     else:
-        j['image_slave_two'] = ''
-    if i.image_slave_three:
-        j['image_slave_three'] = i.image_slave_three.url
+        j['image_subordinate_two'] = ''
+    if i.image_subordinate_three:
+        j['image_subordinate_three'] = i.image_subordinate_three.url
     else:
-        j['image_slave_three'] = ''
-    if i.image_slave_four:
-        j['image_slave_four'] = i.image_slave_four.url
+        j['image_subordinate_three'] = ''
+    if i.image_subordinate_four:
+        j['image_subordinate_four'] = i.image_subordinate_four.url
     else:
-        j['image_slave_four'] = ''
+        j['image_subordinate_four'] = ''
     if i.gst_per is None:
         j['gst_per'] = 0.0
     if i.delivery_charges is None:

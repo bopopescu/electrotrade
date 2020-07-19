@@ -48,17 +48,17 @@ class ProductSpecForm(ModelForm):
 
 class ProductsForm(ModelForm):
     image = forms.FileField(required=True)  # file filed
-    image_slave_one = forms.ImageField(required=False)
-    image_slave_two = forms.ImageField(required=False)
-    image_slave_three = forms.ImageField(required=False)
-    image_slave_four = forms.ImageField(required=False)
+    image_subordinate_one = forms.ImageField(required=False)
+    image_subordinate_two = forms.ImageField(required=False)
+    image_subordinate_three = forms.ImageField(required=False)
+    image_subordinate_four = forms.ImageField(required=False)
     gst_per = forms.FloatField(required=False)
 
     class Meta:
         model = Products
         fields = ('title', 'slug', 'model_number', 'serial_number', 'category', 'brand',
-                  'description', 'actual_price', 'selling_price', 'image', 'image_slave_one', 'image_slave_two',
-                  'image_slave_three', 'image_slave_four', 'gst_per', 'in_offer', 'minimum_qty', 'rewards',
+                  'description', 'actual_price', 'selling_price', 'image', 'image_subordinate_one', 'image_subordinate_two',
+                  'image_subordinate_three', 'image_subordinate_four', 'gst_per', 'in_offer', 'minimum_qty', 'rewards',
                   'delivery_days', 'delivery_charges', 'is_trading', 'is_latest', 'status', 'timestamp')
 
 

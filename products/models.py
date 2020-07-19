@@ -144,10 +144,10 @@ class Products(models.Model):
     actual_price = models.FloatField(null=True, default=None)
     selling_price = models.FloatField(null=True, default=None)
     image = models.FileField(upload_to='products/', blank=True)  # file filed
-    image_slave_one = models.ImageField(upload_to='products/', blank=True)
-    image_slave_two = models.ImageField(upload_to='products/', blank=True)
-    image_slave_three = models.ImageField(upload_to='products/', blank=True)
-    image_slave_four = models.ImageField(upload_to='products/', blank=True)
+    image_subordinate_one = models.ImageField(upload_to='products/', blank=True)
+    image_subordinate_two = models.ImageField(upload_to='products/', blank=True)
+    image_subordinate_three = models.ImageField(upload_to='products/', blank=True)
+    image_subordinate_four = models.ImageField(upload_to='products/', blank=True)
     gst_per = models.FloatField(default=None, null=True, blank=True)
     in_offer = models.CharField(max_length=200, null=True, blank=True)
     minimum_qty = models.IntegerField(default=0)
@@ -213,7 +213,7 @@ class ProductIGST(models.Model):
     updated_at = models.DateTimeField(auto_now_add=True)
 
 
-# master  user order table
+# main  user order table
 class AddCart(models.Model):
     user = models.ForeignKey(Register, on_delete=models.PROTECT, null=True)
     product = models.ForeignKey(Products, on_delete=models.PROTECT, null=True)
